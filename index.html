@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> mywebpage</title>
+
+    <script>
+            function showPosition(){
+             if(navigator.geolocation){
+                 navigator.geolocation.getCurrentPosition(successCallback,errorCallback)
+                 alter("geolocation")
+            }
+            else alter("geolocation not sucessfull")
+    
+            function successCallback(position){
+                var longitude = position.coords.longitude;
+                var latitude = position.coords.latitude;
+                document.getElementById("myPosition").inner.HTML="My position is" + latitude + 
+                "longitude is" + longitude;
+    
+
+        }
+
+        function errorCallback(error){
+            var myPosition = document.getElementById()
+
+            if (error.code ==1) {
+                myPosition.innerHTML("my respond")
+
+            }
+            else if(error.code==2){
+                myPosition.innerHTML("for network isnot respond")
+
+            }
+            else if(error.code==3){
+                myPosition.innerHTML("request timeout")
+
+            }
+            else{
+                myPosition.innerHTML("unknown error")
+
+            }
+        }
+        )
+    </script>
+   
+  
+</head> 
+</title>
+
+<body id="home" class="open-left">
+<section class="center">
+   <header> header </headrer>
+</section>
+
+<section class="center">
+    <header>
+        <nav>
+         navigation bar
+        </nav>
+    </header>
+    <section>
+        <main>
+    <article>
+     <h1 id="myposition"></h1>
+    <button onclick="showPosition()"  >
+
+    </button>
+
+    </article>
+    <section>
+        <footer>
+            footer
+            </footer></section>
+<script type="text/javascript" src="index.js"></script>
+    <h3>HELLO</h3>
+    
+</body>
+</html>
